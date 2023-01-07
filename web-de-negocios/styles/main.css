@@ -1,0 +1,230 @@
+body{
+    color: black;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+:root{
+    --font-titles: 'Bebas Neue', cursive;
+    --font-logo: 'Lobster', cursive;
+
+    --text-upperCase: uppercase;
+
+    --line-big: 600;
+
+    --color-gray: gray;
+}
+
+
+/*Header*/
+.header{
+    margin-bottom: 1em;
+
+    background-color: salmon;
+    background-image: url("../assets/images/architecture-g460fe39a7_1920.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.logo{
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+    font-family: var(--font-logo);
+}
+.header__menu{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1em;
+
+    border-bottom: 1px solid rgb(184, 184, 184);
+}
+.menu__ul{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu__li{
+    margin: 0rem 1rem;
+}
+.menu__link{
+    font-weight: var(--line-big);
+    text-transform: var(--text-upperCase);
+}
+.menu__link:hover, .logo:hover{
+    color: rgb(201, 201, 201);
+}
+
+.header__div{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-end;
+    justify-content: space-around;
+
+    text-align: left;
+
+    padding: 5em;
+}
+.div__title{
+    margin-bottom: 0.2em;
+    text-align: left;
+    
+}
+.div__subtitle{
+    text-align: center;
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+}
+
+.style-subtitles{
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    text-transform: var(--text-upperCase);
+    word-spacing: 0.2em;
+    letter-spacing: 0.1em;
+
+    font-family: var(--font-titles);
+}
+
+
+/*Search bar*/
+.search-bar{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+
+    max-width: 20rem;
+    max-height: 2rem;
+    padding: 0.25rem;
+
+    background-color: white;
+
+
+    border: 1px solid gray;
+    border-radius: 30px;
+}
+.search-bar input{
+    flex: 1;
+
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0.3rem 0.3rem 0.4rem 0.3rem;
+
+    color: black;
+}
+.search-bar:focus-within{
+    transition: all 0.2s ease-out;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
+    border: 0;
+}
+
+.bar__button{
+    color: #5F6368;
+    padding: 0 0.1rem;
+
+    transition: all 0.3s ease-in-out;
+
+    cursor: pointer;
+}
+.bar__button:hover{
+    color: rgb(0, 132, 255);
+}
+
+
+/*Quitamos la "x" que viene por defecto en el input.*/
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
+
+/*Section One*/
+.section-1{
+    width: 100%;
+}
+.section-1__article{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+
+    max-width: 90%;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+.section-1__header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+
+}
+.section__title{
+
+    font-weight: var(--line-big);
+    line-height: 1;
+}
+
+.section-1__div{
+    padding: 1rem;
+
+}
+.section-1__p{
+    margin-bottom: 0.2em;
+
+    font-size: 0.9rem;
+}
+.section-1__link{
+    margin-bottom: 4em;
+    max-width: fit-content;
+
+    font-weight: var(--line-big);
+    text-transform: var(--text-upperCase);
+    border-bottom: 2px solid white;
+}
+.section-1__link:hover{
+    max-width: fit-content;
+    border-color: black;
+}
+
+
+.div__points{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    max-width: 100%;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+.point{
+    max-width: 80%;
+}
+
+.section-1__h3,
+.point .section-1__p
+{
+    max-width: 90%;
+}
+
+.section-1__h3{
+    font-size: 1rem;
+    font-weight: var(--line-big);
+    text-transform: uppercase;
+
+    margin-bottom: 0.2em;
+}
+
+@media screen and (max-width: 768px) {
+    .section-1__article{
+        display: flex;
+        flex-flow: column;
+    }
+}
+
+
+
+
